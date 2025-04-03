@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897257036448",
+    "project_id": "queue-view-cd95d",
+    "storage_bucket": "queue-view-cd95d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897257036448:android:927063c461ae4a2acdc7c5",
+        "android_client_info": {
+          "package_name": "com.example.queueview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9-dzjAL1l4lqAGBDEjMy-BZplC12go4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
