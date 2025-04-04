@@ -1,0 +1,58 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.queueview.app-mergeDebugResources-76:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jamdh\\.gradle\\caches\\8.10.2\\transforms\\b0a552e6594a53003ef6127fefdd46ec\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,17",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,170,254,338,434,536,638,1215",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "165,249,333,429,531,633,727,1299"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jamdh\\Desktop\\buildYourOwnApp\\QueueView\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "106",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "593"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "732",
+                        "endLines": "16",
+                        "endColumns": "12",
+                        "endOffsets": "1210"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\jamdh\\.gradle\\daemon\\8.10.2\\com.example.queueview.app-mergeDebugResources-76:\\values-night-v8\\values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jamdh\\.gradle\\caches\\8.10.2\\transforms\\b0a552e6594a53003ef6127fefdd46ec\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    }
+                }
+            ]
+        }
+    ]
+}

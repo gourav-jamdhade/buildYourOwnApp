@@ -3,6 +3,7 @@ package com.example.queueview
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.queueview.navigation.NavGraph
 import com.example.queueview.ui.theme.QueueViewTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
@@ -16,6 +17,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
 
         // Initialize OSMDroid config early
         Configuration.getInstance().load(this, getSharedPreferences("osmdroid", MODE_PRIVATE))

@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_baseline_location_pin_24.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/baseline_location_pin_24.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca_extralight.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca_extralight.ttf"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca.ttf"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_ic_target_location.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/ic_target_location.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/xml_backup_rules.xml.flat",
+        "source": "com.example.queueview.app-main-80:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_ic_my_location.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/ic_my_location.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca_thin.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca_thin.ttf"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.queueview.app-main-80:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_ic_current_location.xml.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/ic_current_location.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca_light.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca_light.ttf"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca_medium.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca_medium.ttf"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/drawable_logo.png.flat",
+        "source": "com.example.queueview.app-main-80:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.queueview.app-main-80:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.queueview.app-debug-78:/font_lexend_deca_semibold.ttf.flat",
+        "source": "com.example.queueview.app-main-80:/font/lexend_deca_semibold.ttf"
+    }
+]

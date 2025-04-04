@@ -79,7 +79,7 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
 
 
-    implementation ("org.osmdroid:osmdroid-android:6.1.20")
+    implementation("org.osmdroid:osmdroid-android:6.1.20")
 
     implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("com.google.accompanist:accompanist-permissions:0.37.2")
@@ -117,5 +117,18 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
+
+    val work_version = "2.10.0"
+
+
+    // Kotlin + coroutines
+    implementation("androidx.work:work-runtime-ktx:$work_version")
+
+    testImplementation( "org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation ("org.mockito:mockito-core:2.25.0")
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.4.0")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1")
+
+
 
 }

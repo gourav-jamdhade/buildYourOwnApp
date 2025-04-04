@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.queueview.presentation.screens.FormScreen
 import com.example.queueview.presentation.screens.NearbyLocationScreen
+import com.example.queueview.presentation.screens.SplashScreen
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -16,8 +17,18 @@ fun NavGraph() {
 
     NavHost(
         navController = navController,
-        startDestination = "nearby"
+        startDestination = "splash"
     ) {
+
+        composable("splash") {
+            SplashScreen(onNavigate = {
+                navController.navigate("nearby") {
+                    popUpTo("splash") {
+                        inclusive = true
+                    }
+                }
+            })
+        }
         composable("nearby") {
             NearbyLocationScreen(
                 viewModel = koinViewModel(),

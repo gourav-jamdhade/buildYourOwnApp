@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.queueview.app-mergeDebugResources-76:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jamdh\\Desktop\\buildYourOwnApp\\QueueView\\app\\src\\main\\res\\values-v29\\themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "59",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "472"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "462"
+                    }
+                }
+            ]
+        }
+    ]
+}

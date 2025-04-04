@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <style name="Theme.QueueVue" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:forceDarkAllowed" ns1:ignore="NewApi">false</item>
+        <item name="background">@color/white</item>
+    </style>
+</resources>
