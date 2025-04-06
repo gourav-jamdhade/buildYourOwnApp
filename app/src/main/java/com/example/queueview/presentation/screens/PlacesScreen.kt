@@ -35,8 +35,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
@@ -57,22 +55,22 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.queueview.data.model.ObservableQueueData
+import com.example.queueview.presentation.components.SearchWithLocationAwareSuggestions
 import com.example.queueview.presentation.viemodel.MainViewModel
 import com.example.queueview.utils.FontUtils
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.koin.androidx.compose.koinViewModel
 
 
 @SuppressLint("RememberReturnType")
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, FlowPreview::class)
 @Composable
 fun NearbyLocationScreen(
-    viewModel: MainViewModel, onAddDataClick: () -> Unit
+    viewModel: MainViewModel,
+    onAddDataClick: () -> Unit
 ) {
-
-
-
-
 //    val context = LocalContext.current
 //    DisposableEffect(Unit) {
 //        onDispose {
@@ -84,6 +82,8 @@ fun NearbyLocationScreen(
         viewModel.fetchAllQueues()
     }
     // Observe changes
+
+
     val queues by viewModel.queues.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val scope = rememberCoroutineScope()
@@ -99,34 +99,15 @@ fun NearbyLocationScreen(
             isRefreshing = false
         }
     }
+
+
+
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+
         topBar = {
-            TopAppBar(
-                title = {
-                    Row(
-                        modifier = Modifier.fillMaxSize(),
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Text(
-                            text = ("Nearby Places"),
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color.Black,
-                            modifier = Modifier.padding(top = 8.dp),
-                            fontFamily = FontUtils().getFontFamily(),
-                        )
-                    }
-
-                },
-                // colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFF5F33E1)),
-                modifier = Modifier
-                    .height(38.dp)
-                    .background(Color.White),
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.White)
-
-                )
+            SearchWithLocationAwareSuggestions(koinViewModel())
         },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAddDataClick, containerColor = Color(0xFF14C18B),
@@ -150,7 +131,8 @@ fun NearbyLocationScreen(
                 }
 
             }
-        }) { padding ->
+        })
+    { padding ->
 
         if (isLoading && !isRefreshing) {
             Box(
@@ -165,7 +147,7 @@ fun NearbyLocationScreen(
             PullToRefreshBox(
                 isRefreshing = isRefreshing,
                 onRefresh = onRefresh,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.wrapContentSize(),
                 state = state,
                 content = {
                     LazyColumn(
@@ -174,23 +156,32 @@ fun NearbyLocationScreen(
                         contentPadding = PaddingValues(vertical = 16.dp, horizontal = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(16.dp)
                     ) {
-                        items(queues,
-                            key = { it.queueData.id }) { observableQueue ->
-                            QueueCard(observableQueue = observableQueue,
-                                onRemove = {
-                                    scope.launch {
-                                        viewModel.removeQueue(observableQueue.queueData.id)
-                                        snackbarHostState.showSnackbar(
-                                            "${observableQueue.queueData.placeName} removed"
-                                        )
-                                    }
-                                })
+
+                        if (queues.isEmpty()) {
+                            items(viewModel.dummyQueueList.size) {
+                                QueueCard(observableQueue = ObservableQueueData(viewModel.dummyQueueList[it]))
+                            }
+                        } else {
+                            items(queues,
+                                key = { it.queueData.id }) { observableQueue ->
+                                QueueCard(observableQueue = observableQueue,
+                                    onRemove = {
+                                        scope.launch {
+                                            viewModel.removeQueue(observableQueue.queueData.id)
+                                            snackbarHostState.showSnackbar(
+                                                "${observableQueue.queueData.placeName} removed"
+                                            )
+                                        }
+                                    })
+                            }
                         }
+
                     }
                 }
             )
         }
     }
+
 }
 
 
@@ -210,8 +201,6 @@ fun QueueCard(observableQueue: ObservableQueueData, onRemove: () -> Unit = {}) {
         visible = isVisible && currentWaitTime > 0,
         exit = fadeOut() + shrinkVertically()
     ) {
-        // Key fix: Wrap Card in Box with border
-
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -298,6 +287,7 @@ fun QueueCard(observableQueue: ObservableQueueData, onRemove: () -> Unit = {}) {
         }
 
     }
+
 
     LaunchedEffect(currentWaitTime) {
         if (currentWaitTime <= 0) {

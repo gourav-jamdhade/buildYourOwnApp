@@ -100,7 +100,7 @@ fun FormScreen(
     var placeName by remember { mutableStateOf("") }
     var placeType by remember { mutableStateOf("BANK") }
     var waitingTime by remember { mutableStateOf("") }
-    val context = LocalContext.current
+//    val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
     Scaffold(topBar = {

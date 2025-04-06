@@ -129,6 +129,9 @@ dependencies {
     testImplementation ("org.mockito.kotlin:mockito-kotlin:5.4.0")
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1")
 
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
 
 
 }

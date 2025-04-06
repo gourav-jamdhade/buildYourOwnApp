@@ -7,14 +7,13 @@ import com.example.queueview.data.repository.QueueRepository
 import com.example.queueview.data.repository.QueueRepositoryImpl
 import com.example.queueview.presentation.viemodel.FormViewModel
 import com.example.queueview.presentation.viemodel.MainViewModel
+import com.example.queueview.presentation.viemodel.SearchViewModel
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.firestore.FirebaseFirestore
-import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.dsl.viewModel
-import org.koin.core.scope.get
 import org.koin.dsl.module
 
 val appModule = module {
@@ -35,7 +34,8 @@ val appModule = module {
         LocationServices.getFusedLocationProviderClient(get<Context>()).apply {
             // Verify Google Play Services availability
             if (GoogleApiAvailability.getInstance()
-                    .isGooglePlayServicesAvailable(get()) != ConnectionResult.SUCCESS) {
+                    .isGooglePlayServicesAvailable(get()) != ConnectionResult.SUCCESS
+            ) {
                 throw IllegalStateException("Google Play Services unavailable")
             }
         }
@@ -47,7 +47,6 @@ val appModule = module {
             println("FirebaseDataSource initialized") // Debug log
         }
     }
-
 
 
     // Location Services
@@ -74,4 +73,6 @@ val appModule = module {
 
     viewModel { MainViewModel(get()) }
     viewModel { FormViewModel(get(), get()) }
+    viewModel { SearchViewModel() }
+
 }
